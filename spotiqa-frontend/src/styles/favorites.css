@@ -1,0 +1,235 @@
+
+.fav-navbar {
+    overflow: hidden;
+    background: black;
+    padding: 4px 0;
+}
+
+.fav-navbar span {
+    color: white;
+    text-align: center;
+    padding: 6px 10px; 
+    font-size: 17px;
+    float: right;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+/********************************************** TITLES / TEXT **********************************************/
+
+.floor-name,
+.building-title,
+.fave-page-title,
+.fave-page-subtitle {
+    line-height: 0.78;
+    letter-spacing: -0.06em;
+}
+
+.floor-name {
+    font-size: 18px;
+    font-weight: 550;
+    margin-left: 12px;
+    color: #9365f0;
+}
+
+.building-title {
+    font-size: 22px;
+    font-weight: 650;
+    margin-left: 12px;
+}
+
+.fav-page-title {
+    font-size: 40px;
+    font-weight: 650;
+    line-height: 0.6;
+}
+
+.fav-page-subtitle {
+    font-size: 18px;
+    font-weight: 550;
+    color:rgb(48, 48, 48);
+}
+
+.area-descr-fav {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #4b4949;
+    text-align: left;
+    margin-left: 12px;
+    margin-top: 5px;
+}
+
+/********************************************** HEADER **********************************************/
+
+.fav-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-top-fav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    width: fit-content;
+}
+
+.info-top h1 {
+    white-space: nowrap;
+    margin: 0;
+}
+
+.back-btn-fav {
+    font-size: 17px;
+    font-weight: 700;
+    color: #252b4c;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #e7ebff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    transition: transform 0.25s ease;
+    margin-left: 800px;
+}
+
+.back-btn-fav:hover { transform: translateY(-1.8px) scale(1.1); }
+
+/********************************************** ICONS **********************************************/
+
+.info-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.info-icon-circle,
+.fav-icon-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon-circle {
+    background: #b9b9e9;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.fav-icon-circle {
+    background: #e2e2f4;
+    border-radius: 30%;
+}
+
+.building-icon { color: #8b5cf6; }
+
+/********************************************** LAYOUT **********************************************/
+
+.favs-layout {
+    display: flex;
+    min-height: calc(100vh - 55px);
+    width: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px;
+    gap: 30px;
+}
+
+.fav-card-grid-wrapper { flex: 1; }
+
+.fav-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    column-gap: 0px;
+    row-gap: 30px;
+    justify-content: center;
+    justify-items: center;
+}
+
+/********************************************** FLEX ROWS **********************************************/
+
+.fav-info,
+.building-info-row,
+.fav-card-title,
+.remove-btn-txt {
+    display: flex;
+    flex-direction: row;
+}
+
+.fav-info { gap: 20px; }
+.building-info-row { gap: 8px; }
+
+.remove-btn-txt {
+    gap: 10px;
+    justify-content: center;
+}
+
+/********************************************** FAVORITE CARD **********************************************/
+
+.fav-card {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    background: #f7f7fc;
+    border: 1px solid #e3e4f3;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 0px;
+    gap: 20px;
+    width: fit-content;
+    height: 315px;
+}
+
+/********************************************** BUTTONS **********************************************/
+
+.remove-btn {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #bcbcbc;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    max-height: 30px;
+    max-width: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/********************************************** DIVIDER **********************************************/
+
+.divider-horizontal-fav-page {
+    width: 100%;
+    height: 1px;
+    background-color: #cfcfcf;
+    display: block;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1025px) {
+
+    .fav-navbar span {
+        padding: 3px 7px; 
+        font-size: 12px;
+    }
+
+    .fav-page-title { 
+        font-size: 30px; 
+        white-space: nowrap; 
+    }
+
+    .fav-page-subtitle { font-size: 10px; }
+    .favs-layout { flex-direction: column; }
+    .back-btn-fav { margin-left: 0px; font-size: 10px; }
+    .info-top-fav { margin-left: 0px; }
+}
