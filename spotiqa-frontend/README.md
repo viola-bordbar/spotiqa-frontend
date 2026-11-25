@@ -1,71 +1,68 @@
-# Spotiqa — University Seat-Finding Prototype (Frontend)
+# Spotiqa — University Seat-Finding Prototype
 
-Spotiqa is a university group project exploring how students can find available seating in compact campus study areas. This repository is a **frontend-focused portfolio extract** of the collaborative prototype, not the complete original system.
+Spotiqa is a university group project exploring how students can find available seating in campus study areas. This repository showcases the frontend portion of the collaborative application.
 
-## My contribution
+## My Contribution
 
-I worked on the **frontend interface, styling, and interaction logic**, using the same Vue/JSX-based setup as a previous university web application. The original team project also included backend communications and hardware components developed by other team members; **I did not develop those parts**.
+Developed the frontend interface, styling and interaction logic using JavaScript, JSX and Vue. Worked with the project's model–presenter–view structure to implement user-facing functionality and integrate frontend components.
 
-Some shared frontend integration/state files are retained so the interface code can be understood in context. The repository should not be interpreted as claiming sole authorship of the entire application.
+The original project also included backend communications and hardware components developed by other team members.
 
-## Features represented in the frontend
+## Features
 
-- Browse campus buildings and their study areas.
-- View area details and displays for seating and environmental readings.
-- Sign in, sign up, and manage account-related UI flows.
-- Navigate between the start page, area information, and favorites.
-- View admin-facing interface elements for managing spaces and notifications.
-- Display sensor-history data with charts where readings are available.
+- Browse university buildings and study areas.
+- View area information, seating availability and environmental readings.
+- User authentication and account-related interfaces.
+- Navigate between the start page, area information and favorites.
+- Admin-facing interfaces for managing spaces and notifications.
+- Visualize sensor-history data using charts.
 
 ## Technologies
 
-- **JavaScript and JSX**, **Vue**, **Vue Router**
-- **HTML and CSS**
-- **Firebase Authentication** and **Cloud Firestore** (frontend integration)
-- **Chart.js** for data visualizations
-- **Vite** for local development/builds
+- JavaScript and JSX
+- Vue and Vue Router
+- HTML and CSS
+- Firebase Authentication and Cloud Firestore
+- Chart.js
+- Vite
 
-## Project structure
+## Project Structure
 
-```text
-spotiqa-frontend/
-├── src/
-│   ├── views/          # UI pages
-│   ├── presenters/     # Interaction and presentation logic
-│   ├── styles/         # CSS
-│   ├── model/          # Shared client-side state / Firebase integration
-│   ├── VueRoot.jsx     # Routing/root UI
-│   ├── index.jsx       # Application entry point
-│   └── firebaseConfig.js  # Environment-based Firebase configuration
-├── index.html
-├── package.json
-├── package-lock.json
-├── vite.config.js
-└── .env.example
+The frontend follows a model–presenter–view structure:
+
+- **Model:** Shared application state and Firebase-related data integration.
+- **Presenters:** Application logic connecting the model and views.
+- **Views:** UI components and pages.
+- **Styles:** Page-specific and shared CSS.
+
+## Running Locally
+
+**Requirements:** Node.js and npm.
+
+1. Clone the repository.
+2. Install dependencies:
+
+   ```bash
+   npm ci
+   ```
+
+3. Configure Firebase using your own Firebase project and the required environment variables.
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL provided by Vite.
+
+To create an optimized production build:
+
+```bash
+npm run build
 ```
 
-## Project scope & limitations
+## Project Scope
 
-This repository contains the **frontend portion of Spotiqa**, a collaborative university project developed at KTH Royal Institute of Technology.
+This repository contains a frontend-focused portfolio extract of a collaborative university project developed at KTH Royal Institute of Technology. My contributions focused on frontend development, including UI design, styling and interaction logic.
 
-My contributions focused on frontend development, including user interface design, styling, and interaction logic. The original application also included backend services, communication systems, and hardware components developed by other team members.
-
-Because this repository showcases only the frontend, it is **not intended to serve as a fully functional standalone version** of the original application. Some features depend on the original project's Firebase services and hardware-generated sensor data, which are not included. The interface may still be run or adapted locally with suitable configuration, but a complete demonstration requires replacement services or mock data.
-
-The purpose of this repository is to demonstrate my frontend development contributions rather than reproduce the complete collaborative system.
-
-## Running locally
-
-To work with the authenticated app locally, configure a **separate Firebase project** with the necessary services, data structures, and security rules. A Firebase project alone will not recreate the sensor feed.
-
-1. Install Node.js and npm versions compatible with the versions of Vite in `package.json`.
-2. Run `npm ci`.
-3. Copy `.env.example` to `.env.local` and fill in configuration for your **own demo Firebase project**.
-4. Run `npm run dev`.
-5. Open the local URL printed by Vite (the dev server is configured to use port **8080**).
-
-You can create an optimized build with `npm run build`.
-
-## Portfolio status and attribution
-
-This repository presents a selection of my university project contributions for internship and bachelor's thesis applications. Screenshots of the original working interface can be added here with the team's permission. Do not publish teammate-owned material, course-restricted solutions, or private data without authorization.
+Some functionality relies on Firebase services and sensor data from the original project. The repository is therefore not a complete standalone reproduction of the original application.
