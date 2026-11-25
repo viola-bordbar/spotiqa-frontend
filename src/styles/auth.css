@@ -1,0 +1,255 @@
+/* Inspo from colorlib Neumorphism Login form, https://colorlib.com/wp/html5-and-css3-login-forms/ */
+
+
+
+/* Base:  This is to make sure app adopts font acc to devices*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+}
+
+/* Centering wrapper */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #e0e5ec;
+}
+
+/* Container */
+.login-container {
+    width: 200%;
+    max-width: 400px;
+}
+
+/* Card */
+.login-card {
+    background: #e0e5ec;
+    position: relative;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 
+        15px 15px 40px #bec3cf,
+        -15px -15px 40px #ffffff;
+}
+
+
+.login-icon {
+    position: absolute;
+    top: -10px;              /* lifts it above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e0e5ec;
+    box-shadow: 
+        8px 8px 20px #bec3cf,
+        -8px -8px 20px #ffffff;
+
+    font-size: 22px;
+}
+
+
+/*hover effect*/
+.login-card:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.neu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        8px 8px 20px #bec3cf,
+        -8px -8px 20px #ffffff;
+}
+
+
+/* Header */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: #3d4468;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    color: #9499b7;
+    font-size: 14px;
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.neu-input {
+    position: relative;
+    background: #e0e5ec;
+    border-radius: 12px;
+    box-shadow: 
+        inset 6px 6px 12px #bec3cf,
+        inset -6px -6px 12px #ffffff;
+}
+
+.neu-input input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 15px;
+    color: #3d4468;
+    outline: none;
+}
+
+
+/* Floating label */
+.neu-input label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9499b7;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+
+
+.neu-input input:focus + label,
+.neu-input input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+}
+
+/* Password toggle button */
+.neu-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: #e0e5ec;
+    padding: 5px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 
+        3px 3px 8px #bec3cf,
+        -3px -3px 8px #ffffff;
+}
+
+/* Button */
+.neu-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #e0e5ec;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    box-shadow: 
+        6px 6px 15px #bec3cf,
+        -6px -6px 15px #ffffff;
+}
+
+/* Loading state */
+.neu-button.loading {
+    opacity: 0.7;
+}
+
+/* Links */
+.forgot-link {
+    font-size: 13px;
+    color: #6c7293;
+    cursor: pointer;
+}
+
+/* Switch text */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.signup-link a {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Errors */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form-group.error .neu-input {
+    box-shadow: 
+        inset 6px 6px 12px #ffb8c4,
+        inset -6px -6px 12px #ffffff;
+}
+
+/* Success */
+.success-message {
+    text-align: center;
+    margin-top: 10px;
+    color: green;
+}
+
+
+
+/*remember me */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.remember-wrapper input {
+    display: none;
+}
+
+.checkbox-label {
+    color: #686f87;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.neu-checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: #e0e5ec;
+    box-shadow: 
+        3px 3px 8px #bec3cf,
+        -3px -3px 8px #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember-wrapper input:checked + .checkbox-label .neu-checkbox {
+    box-shadow: 
+        inset 2px 2px 5px #bec3cf,
+        inset -2px -2px 5px #ffffff;
+}
+
+.remember-wrapper input:checked + .checkbox-label .neu-checkbox::after {
+    content: "✓";
+    color: #4caf50;
+    font-size: 12px;
+    font-weight: bold;
+}
