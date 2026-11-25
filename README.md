@@ -1,6 +1,6 @@
-# Spotiqa — University Seat-Finding Prototype
+# Spotiqa - University Seat-Finding Prototype
 
-Spotiqa is a university group project exploring how students can find available seating in campus study areas. This repository showcases the frontend portion of the collaborative application.
+Spotiqa is a university group project helping students find available seating in campus study areas. This repository showcases the frontend portion of the collaborative application.
 
 ## My Contribution
 
